@@ -1,0 +1,169 @@
+@import "fonts"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #d4dae1
+	opacity: 1
+
+*:-moz-placeholder
+	color: #d4dae1
+	opacity: 1
+
+*::-moz-placeholder
+	color: #d4dae1
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #d4dae1
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #d4dae1
+body input:required:valid,
+body textarea:required:valid
+	color: #d4dae1
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+	margin: 0
+	padding: 0
+	border: 0
+	font-size: 100%
+	font: inherit
+	vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+	display: block
+
+ol, ul 
+	list-style: none
+
+blockquote, q
+	quotes: none
+h1
+	font-family: "Assistant", sans-serif
+	font-size: 64px
+	line-height: 67px
+	letter-spacing: 0.05em
+	color: #000000
+blockquote:before, blockquote:after, q:before, q:after
+	content: ''
+	content: none
+a
+	text-decoration: none
+	outline: none
+table
+	border-collapse: collapse
+	border-spacing: 0
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: normal
+	font-family: "Lato", sans-serif
+	overflow-x: hidden
+img
+	display: block
+	max-width: 100%
+	height: auto
+.container
+	width: 100%
+	max-width: 1340px
+	padding: 0 25px
+	margin: 0 auto
+.header
+	padding: 10px 0
+	&-item
+		display: flex
+		align-items: center
+		margin-right: 35px
+	&-basket
+		&-span
+			margin-left: 14px
+			font-family: "Assistant-Regular", sans-serif
+			font-style: normal
+			font-weight: 600
+			font-size: 14px
+			line-height: 18px
+			color: #000000
+	&-flex
+		display: flex
+		align-items: center
+		&-main
+			display: flex
+			justify-content: space-between
+	&-menu
+		display: flex
+	&-link
+		display: flex
+	&-btn
+		font-family: "Assistant", sans-serif
+		font-style: normal
+		font-weight: 600
+		font-size: 14px
+		line-height: 1
+		text-align: right
+		color: #C4AD75
+		padding: 12px 32px 11px
+		border: 1px solid #C4AD75
+		box-sizing: border-box
+		border-radius: 50px
+	&-btn-menu
+		cursor: pointer
+		width: 20px
+		height: 15px
+		position: relative
+		-webkit-transition: background-color .5s ease
+		transition: background-color .5s ease
+	&-line
+		width: 20px
+		height: 1px
+		display: block
+		background: #000000
+		position: absolute
+		left: 0
+		-webkit-transition: all .5s ease
+		transition: all .5s ease
+.header-btn-menu.btn-active .header-line_center, .header-btn-menu.bg-active .header-line_center
+	opacity: 0
+
+.header-btn-menu.btn-active .header-line_top, .header-btn-menu.bg-active .header-line_top
+	-webkit-transform: translateY(7px) rotate(225deg)
+	transform: translateY(7px) rotate(225deg)
+
+.header-btn-menu.btn-active .header-line_bottom, .header-btn-menu.bg-active .header-line_bottom
+	-webkit-transform: translateY(-7px) rotate(-225deg)
+	transform: translateY(-9px) rotate(-225deg)
+
+.header-line.header-line_top
+	top: 0
+
+.header-line.header-line_center
+	top: 50%
+	transform: translateY(-50%)
+
+.header-line.header-line_bottom
+	bottom: 0
+.light
+	font-family: 'Assistant', sans-serif
+	font-weight: 300
+.regular
+	font-family: 'Assistant', sans-serif
+	font-weight: normal
+.bold
+	font-family: 'Assistant', sans-serif
+	font-weight: bold
+
+@import "../components/pages/home/style"
+@import "media" // Всегда в конце
